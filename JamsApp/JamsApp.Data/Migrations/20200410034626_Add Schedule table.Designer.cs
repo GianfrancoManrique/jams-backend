@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JamsApp.Data.Migrations
 {
-    [DbContext(typeof(JamsContext))]
+    [DbContext(typeof(DatabaseService))]
     [Migration("20200410034626_Add Schedule table")]
     partial class AddScheduletable
     {

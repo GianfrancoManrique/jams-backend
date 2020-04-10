@@ -18,7 +18,7 @@ namespace JamsApp.Domain
         [Required][MaxLength(2)]
         public string Type { get; set; }
 
-        public DateTime FecHour { get; set; }
+        public DateTime FecCreation { get; set; }
 
         public bool State { get; set; }
     }

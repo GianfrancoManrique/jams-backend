@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JamsApp.Data.Migrations
 {
-    [DbContext(typeof(JamsContext))]
+    [DbContext(typeof(DatabaseService))]
     partial class JamsContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -29,7 +29,7 @@ namespace JamsApp.Data.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("FecHour")
+                    b.Property<DateTime>("FecCreation")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("State")
@@ -98,8 +98,10 @@ namespace JamsApp.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Description")
-                        .HasColumnType("int");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<DateTime>("End")
                         .HasColumnType("datetime2");

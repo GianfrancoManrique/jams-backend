@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JamsApp.Data", "JamsApp.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JamsApp.Domain", "JamsApp.Domain\JamsApp.Domain.csproj", "{F2F952FE-8D36-45F9-8AB2-43E780DBF949}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "JamsApp.Api", "JamsApp.Api\JamsApp.Api.fsproj", "{8F5B4513-AE92-492E-B3DB-9758A01F2D13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JamsApp.Api", "JamsApp.Api\JamsApp.Api.csproj", "{5E07090B-C7D8-4ADF-B190-6FEB7BACE6BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{F2F952FE-8D36-45F9-8AB2-43E780DBF949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2F952FE-8D36-45F9-8AB2-43E780DBF949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2F952FE-8D36-45F9-8AB2-43E780DBF949}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F5B4513-AE92-492E-B3DB-9758A01F2D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F5B4513-AE92-492E-B3DB-9758A01F2D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F5B4513-AE92-492E-B3DB-9758A01F2D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F5B4513-AE92-492E-B3DB-9758A01F2D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E07090B-C7D8-4ADF-B190-6FEB7BACE6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E07090B-C7D8-4ADF-B190-6FEB7BACE6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E07090B-C7D8-4ADF-B190-6FEB7BACE6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E07090B-C7D8-4ADF-B190-6FEB7BACE6BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

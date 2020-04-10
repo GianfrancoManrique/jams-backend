@@ -15,8 +15,8 @@ namespace JamsApp.Domain
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public int Description { get; set; }
+        [Required][MaxLength(20)]
+        public string Description { get; set; }
 
         [Required]
         public DateTime Start { get; set; }
