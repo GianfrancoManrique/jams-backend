@@ -28,6 +28,11 @@ namespace JamsApp.Domain
 
         public float Salary { get; set; }
 
+        [Required]
+        public int ScheduleId { get; set; }
+
+        public Schedule Schedule { get; set; }
+
         public bool State { get; set; }
 
         public List<Assistance> Assistances { get; set; }

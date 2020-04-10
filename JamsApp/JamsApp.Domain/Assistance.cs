@@ -9,8 +9,17 @@ namespace JamsApp.Domain
     {
         [Key]
         public int Id { get; set; }
+       
+        [Required]
+        public int EmployeeId { get; set; }
 
         public Employee Employee { get; set; }
-        public int EmployeeId { get; set; }
+
+        [Required][MaxLength(2)]
+        public string Type { get; set; }
+
+        public DateTime FecHour { get; set; }
+
+        public bool State { get; set; }
     }
 }
