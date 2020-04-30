@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using JamsApp.Application.Schedules.Queries.GetSchedules;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +11,18 @@ namespace JamsApp.Api.Controllers
     [ApiController]
     public class ScheduleController: Controller
     {
-        public ScheduleController()
-        {
+        private readonly IGetSchedulesQuery _IGetSchedulesQuery;
 
+        public ScheduleController(IGetSchedulesQuery IGetSchedulesQuery)
+        {
+            _IGetSchedulesQuery = IGetSchedulesQuery;
         }
 
         [HttpGet]
         public IActionResult GetSchedules()
         {
-            //var courses = _IgetCoursesQuery.Execute();
-            return Ok();
+            var courses = _IGetSchedulesQuery.Execute();
+            return Ok(courses);
         }
     }
 }

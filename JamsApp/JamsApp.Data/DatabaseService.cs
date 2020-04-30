@@ -1,4 +1,5 @@
-﻿using JamsApp.Domain;
+﻿using JamsApp.Application.Common;
+using JamsApp.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace JamsApp.Data
 {
-    public class DatabaseService:DbContext
+    public class DatabaseService:DbContext, IDatabaseService
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Assistance> Assistances { get; set; }
