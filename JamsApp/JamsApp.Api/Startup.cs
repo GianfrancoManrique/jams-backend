@@ -15,6 +15,7 @@ using AutoMapper;
 using JamsApp.Data.Profiles;
 using JamsApp.Application.Schedules.Queries.GetSchedules;
 using JamsApp.Application.Common;
+using JamsApp.Application.Employees.Commands.PostEmployeeAssistance;
 
 namespace JamsApp.Api
 {
@@ -47,6 +48,7 @@ namespace JamsApp.Api
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new SchedulesProfile());
+                mc.AddProfile(new AssistancesProfile());
             });
 
             IMapper mapper = mappingConfig.CreateMapper();
@@ -55,6 +57,7 @@ namespace JamsApp.Api
 
             services.AddTransient<IDatabaseService, DatabaseService>();
             services.AddTransient<IGetSchedulesQuery, GetSchedulesQuery>();
+            services.AddTransient<IPostEmployeeAssistanceCommand, PostEmployeeAssistanceCommand>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

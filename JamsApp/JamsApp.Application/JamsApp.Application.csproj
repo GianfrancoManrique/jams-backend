@@ -13,4 +13,8 @@
     <ProjectReference Include="..\JamsApp.Domain\JamsApp.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Employees\Commands\PostEmployee\" />
+  </ItemGroup>
+
 </Project>

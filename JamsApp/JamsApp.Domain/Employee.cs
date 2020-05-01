@@ -16,7 +16,7 @@ namespace JamsApp.Domain
         [Required][MaxLength(2)]
         public string DocumentType { get; set; }
 
-        [Required][MaxLength(2)]
+        [Required][MaxLength(15)]
         public string DocumentNumber { get; set; }
 
         public string Name { get; set; }

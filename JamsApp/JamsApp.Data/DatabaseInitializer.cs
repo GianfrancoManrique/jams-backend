@@ -19,7 +19,14 @@ namespace JamsApp.Data
                 );
             }
 
-            database.SaveChanges();
+            if (!database.Employees.Any())
+            {
+                database.AddRange(
+                new Employee {DocumentType="01",DocumentNumber="46173384",Name="Gianfranco",LastName="Manrique Valentín",
+                EmployeeType="01",Salary=930.00f,State=true,ScheduleId=1}
+                );
+            }
+                database.SaveChanges();
         }
     }
 }

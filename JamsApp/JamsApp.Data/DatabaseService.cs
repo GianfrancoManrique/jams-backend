@@ -15,12 +15,22 @@ namespace JamsApp.Data
 
         public DatabaseService(DbContextOptions<DatabaseService> options) : base(options)
         {
-            //this.Database.AutoTransactionsEnabled = false;
+            this.Database.AutoTransactionsEnabled = false;
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
          
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
+
+        public void Save()
+        {
+            this.SaveChanges();
         }
     }
 }

@@ -11,5 +11,6 @@ namespace JamsApp.Application.Common
         DbSet<Employee> Employees { get; set; }
         DbSet<Assistance> Assistances { get; set; }
         DbSet<Schedule> Schedules { get; set; }
+        void Save();
     }
 }
