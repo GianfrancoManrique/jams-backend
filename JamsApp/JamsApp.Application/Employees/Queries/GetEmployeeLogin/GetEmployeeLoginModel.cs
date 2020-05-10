@@ -4,8 +4,9 @@ using System.Text;
 
 namespace JamsApp.Application.Employees.Queries.GetEmployeeLogin
 {
-    public interface IGetEmployeeQuery
+    public class GetEmployeeLoginModel
     {
-        GetEmployeeModel Execute(string Username, string Password);
+        public string Name { get; set; }
+        public string LastName { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using JamsApp.Application.Employees.Commands.PostEmployeeAssistance;
 using JamsApp.Application.Employees.Commands.PostEmployeeLogin;
+using JamsApp.Application.Employees.Queries.GetEmployeeLogin;
 using JamsApp.Application.Schedules.Queries.GetSchedules;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,17 +15,19 @@ namespace JamsApp.Api.Controllers
     public class EmployeeController: Controller
     {
         private readonly IPostEmployeeAssistanceCommand _IPostEmployeeAssistanceCommand;
+        private readonly IGetEmployeeLoginQuery _IGetEmployeeLoginQuery;
 
-        public EmployeeController(IPostEmployeeAssistanceCommand IPostEmployeeAssistanceCommand)
+        public EmployeeController(IPostEmployeeAssistanceCommand IPostEmployeeAssistanceCommand, IGetEmployeeLoginQuery IGetEmployeeLoginQuery)
         {
             _IPostEmployeeAssistanceCommand = IPostEmployeeAssistanceCommand;
+            _IGetEmployeeLoginQuery = IGetEmployeeLoginQuery;
         }
 
         [HttpPost("/api/v1.0/Authentication/Login")]
 
         public IActionResult Login(PostEmployeeLoginModel model)
         {
-            var employee = _IPostEmployeeLogin.Execute(model);
+            var employee = _IGetEmployeeLoginQuery.Execute(model.Username,model.Password);
 
             return Ok(employee);
         }

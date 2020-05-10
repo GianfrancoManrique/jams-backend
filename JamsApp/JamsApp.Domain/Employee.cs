@@ -35,7 +35,7 @@ namespace JamsApp.Domain
 
         public bool State { get; set; }
 
-        [MaxLength(20)]
+        [MaxLength(15)]
         public string Username { get; set; }
 
         [MaxLength(256)]

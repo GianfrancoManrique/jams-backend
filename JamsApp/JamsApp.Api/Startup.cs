@@ -16,6 +16,7 @@ using JamsApp.Data.Profiles;
 using JamsApp.Application.Schedules.Queries.GetSchedules;
 using JamsApp.Application.Common;
 using JamsApp.Application.Employees.Commands.PostEmployeeAssistance;
+using JamsApp.Application.Employees.Queries.GetEmployeeLogin;
 
 namespace JamsApp.Api
 {
@@ -56,7 +57,9 @@ namespace JamsApp.Api
             #endregion
 
             services.AddTransient<IDatabaseService, DatabaseService>();
+            services.AddTransient<IDatabaseComplexService, DatabaseComplexService>();
             services.AddTransient<IGetSchedulesQuery, GetSchedulesQuery>();
+            services.AddTransient<IGetEmployeeLoginQuery, GetEmployeeLoginQuery>();
             services.AddTransient<IPostEmployeeAssistanceCommand, PostEmployeeAssistanceCommand>();
         }
 
