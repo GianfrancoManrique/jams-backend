@@ -35,6 +35,12 @@ namespace JamsApp.Domain
 
         public bool State { get; set; }
 
+        [MaxLength(20)]
+        public string Username { get; set; }
+
+        [MaxLength(256)]
+        public byte[] Password { get; set; }
+
         public List<Assistance> Assistances { get; set; }
     }
 }

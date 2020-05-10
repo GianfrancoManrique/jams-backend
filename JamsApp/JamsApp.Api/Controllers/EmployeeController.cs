@@ -1,4 +1,5 @@
 ﻿using JamsApp.Application.Employees.Commands.PostEmployeeAssistance;
+using JamsApp.Application.Employees.Commands.PostEmployeeLogin;
 using JamsApp.Application.Schedules.Queries.GetSchedules;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -17,6 +18,15 @@ namespace JamsApp.Api.Controllers
         public EmployeeController(IPostEmployeeAssistanceCommand IPostEmployeeAssistanceCommand)
         {
             _IPostEmployeeAssistanceCommand = IPostEmployeeAssistanceCommand;
+        }
+
+        [HttpPost("/api/v1.0/Authentication/Login")]
+
+        public IActionResult Login(PostEmployeeLoginModel model)
+        {
+            var employee = _IPostEmployeeLogin.Execute(model);
+
+            return Ok(employee);
         }
 
         [HttpPost("{EmployeeId}/Assistance")]
