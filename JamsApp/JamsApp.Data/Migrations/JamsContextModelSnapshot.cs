@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JamsApp.Data.Migrations
 {
-    [DbContext(typeof(DatabaseComplexService))]
+    [DbContext(typeof(DatabaseService))]
     partial class JamsContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

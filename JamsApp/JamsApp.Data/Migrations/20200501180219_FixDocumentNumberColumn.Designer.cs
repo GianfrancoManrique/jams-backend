@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JamsApp.Data.Migrations
 {
-    [DbContext(typeof(DatabaseComplexService))]
+    [DbContext(typeof(DatabaseService))]
     [Migration("20200501180219_FixDocumentNumberColumn")]
     partial class FixDocumentNumberColumn
     {

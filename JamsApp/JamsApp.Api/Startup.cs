@@ -16,7 +16,6 @@ using JamsApp.Data.Profiles;
 using JamsApp.Application.Schedules.Queries.GetSchedules;
 using JamsApp.Application.Common;
 using JamsApp.Application.Employees.Commands.PostEmployeeAssistance;
-using JamsApp.Application.Employees.Queries.GetEmployeeAssistances;
 
 namespace JamsApp.Api
 {
@@ -57,10 +56,8 @@ namespace JamsApp.Api
             #endregion
 
             services.AddTransient<IDatabaseService, DatabaseService>();
-            services.AddTransient<IDatabaseComplexService, DatabaseComplexService>();
             services.AddTransient<IGetSchedulesQuery, GetSchedulesQuery>();
             services.AddTransient<IPostEmployeeAssistanceCommand, PostEmployeeAssistanceCommand>();
-            services.AddTransient<IGetEmployeeAssistancesQuery, GetEmployeeAssistancesQuery>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

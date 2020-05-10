@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JamsApp.Data.Migrations
 {
-    [DbContext(typeof(DatabaseComplexService))]
+    [DbContext(typeof(DatabaseService))]
     [Migration("20200403050346_init")]
     partial class init
     {

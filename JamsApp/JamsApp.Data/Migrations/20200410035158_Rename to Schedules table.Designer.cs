@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JamsApp.Data.Migrations
 {
-    [DbContext(typeof(DatabaseComplexService))]
+    [DbContext(typeof(DatabaseService))]
     [Migration("20200410035158_Rename to Schedules table")]
     partial class RenametoSchedulestable
     {
